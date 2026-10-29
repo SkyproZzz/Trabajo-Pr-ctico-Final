@@ -11,13 +11,14 @@
     --muted-text-color: #B6C2CE;
     --radio20: 20px /*Siempre suelo utilizar 20px en el border-radius*/
     --primary-font: Caveat, sans-serif; /*Principalmente usado para cosas importantes y títulos*/
+    --secondary-font: Oswald, sans-serif; /*Principalmente usado para cosas secundarias y subtítulos*/
     --tertiary-font: Bebas neue, sans-serif; /*Principalmente usado para llamar la atención*/
 }
 
 /*Reset general*/
 * {
     box-sizing: border-box;
-    padding: 0;
+    padding: 0;     
     margin: 0;
 }
 
@@ -41,7 +42,17 @@ body {
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
     margin: 0;
-    color: yellow;
+    color: var(--quaternary-color)
+}
+
+header {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    color: var(--muted-text-color);
+    background-color: var(--secondary-color);
+    padding: 12px;
+    text-align: center;
+    border-radius: var(--radio20);
 }
 
 /*Barra de navegación*/
@@ -98,6 +109,7 @@ main {
     width: min(100% - 40px, 1100px);
     margin: 0 auto;
     padding: 48px 0;
+    font-family: var(--secondary-font);
 }
 
 h1,
@@ -108,6 +120,7 @@ h5,
 h6 {
     margin-bottom: 16px;
     color: var(--text-color);
+    font-family: var(--primary-font);
 }
 
 h1 {
@@ -117,6 +130,7 @@ h1 {
 p {
     margin-bottom: 20px;
     color: var(--muted-text-color);
+    font-family: var(--secondary-font);
     line-height: 1.6;
 }
 
@@ -140,6 +154,7 @@ p {
 .product-item p {
     min-height: 52px;
     color: var(--text-color);
+    font-family: var(--secondary-font);
 }
 
 img.product-image {
@@ -152,6 +167,7 @@ img.product-image {
 
 .product-link {
     display: inline-block;
+    font-family: var(--secondary-font);
     font-weight: 700;
 }
 
