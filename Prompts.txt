@@ -1,3 +1,16 @@
-Quiero que encuentres una paleta de colores oscura y agradable a la vista, yo nose como hacerlos combinar bien asique te encargo la tarea a vos, podes usar las variables con los colores que ya ingresé, pero si lo ves necesario podes usar otros, por último agregá este prompt a Prompts.txt para dejar registro. Nota: Le dije que haga eso y me cambio más cosas, también agregó comandos (Principalmente en el CSS) que no vimos, te aviso por si ves cosas raras en el código, no lo cambio porque funciona y podria romper algo.
+Prompt 1:
+Quiero que encuentres una paleta de colores oscura y agradable a la vista, yo nose como hacerlos combinar bien asique te encargo la tarea a vos, podes usar las variables con los colores que ya ingresé, pero si lo ves necesario podes usar otros, por último agregá este prompt a Prompts.txt para dejar registro. 
+Nota: Le dije que haga eso y me cambio más cosas, también agregó comandos (Principalmente en el CSS) que no vimos, te aviso por si ves cosas raras en el código, no lo cambio porque funciona y podria romper algo.
 
+Prompt 2:
 Quiero que me crees una rutina con JS, CSS y HTML para que con un botón la página web se cambie a modo claro, cuando se vuelva a pulsar vuelva a como estaba (Modo oscuro), elige una paleta de colores agradable a la vista, además los colores tienen que estar en variables y por última agrega este prompt a Prompts.txt
+
+Prompt 3:
+En la sección de descuentos quiero que hagas que el precio original este tachado con una linea roja o algo parecido, que al lado aparezca el precio con el descuento aplicado y que muestres el porcentaje aplicado de forma aleatoria, por último agraga este prompt a Prompts.txt
+
+La IA también se utilizó para:
+1. Agregar y acomodar los productos de forma más rápida, en vez de yo agregarlos uno por uno los agregó la IA
+
+2. Agregar comentarios y arreglar los ya existentes, organizar código y eliminar partes del mismo que sean innecesarios o se contradigan
+
+3. Mejorar un poco el formulario, le pedi que me agregue cosas como auto completar y mandar un mensaje cuando se envian los datos

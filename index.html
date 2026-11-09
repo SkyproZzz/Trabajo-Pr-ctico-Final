@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <!--Link y Title-->
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/theme.js" defer></script>
-    <title>Game Archive</title>
-    <link rel="shortcut icon" href="./assets/icon/GameController.svg">
-
-    <!--Metas-->
+    <!-- Codificación, adaptación móvil e información del sitio. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lista de precios de videojuegos y servicios relacionados. Encuentra los mejores precios y ofertas en nuestra tienda en línea.">
     <meta name="keywords" content="precios, productos, servicios, lista de precios">
     <meta name="author" content="Lionel Gramaglia">
-     
-    <!--Letras-->    
+    <title>Game Archive</title>
+
+    <!-- Fuentes, estilos, cambio de tema y favicon. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Caveat:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/theme.js" defer></script>
+    <link rel="shortcut icon" href="./assets/icon/GameController.svg">
 </head>
 <body>
-    <!--Promobanner-->
-    <div class="promo-banner">
+    <!-- Oferta promocional que aparece antes del encabezado. -->
+    <div id="inicio" class="promo-banner">
         <p>¡Oferta especial por tiempo limitado! Aprovecha los mejores precios en videojuegos relacionados.</p>
     </div>
 
-    <!--Encabezado-->
+    <!-- Presentación del sitio y control para alternar el tema visual. -->
     <header class="header">
         <h1>Game Archive</h1>
         <p>Bienvenido a Game Archive nuestra tienda en línea. Aquí encontrarás los mejores precios y ofertas en videojuegos.</p>   
         <button type="button" class="theme-toggle" aria-pressed="false">Cambiar a modo claro</button>
     </header>
 
-    <!--Navegación y búsqueda-->
+    <!-- Enlaces para ir a las secciones principales de la página. -->
     <nav>
         <ul>
-            <li><a href="#index.html"><img src="./assets/icon/Home.svg" alt="Inicio" class="Icon">Inicio</a></li>
+            <li class="inicio"><a href="#inicio"><img src="./assets/icon/Home.svg" alt="Inicio" class="Icon">Inicio</a></li>
             <li><a href="#productos"><img src="./assets/icon/Shopping.svg" alt="Productos" class="Icon">Productos</a></li>
             <li><a href="#descuentos"><img src="./assets/icon/Discount2.svg" alt="Descuentos" class="Icon">Descuentos</a></li>
             <li><a href="#tendencia"><img src="./assets/icon/Tendencia.svg" alt="En tendencia" class="Icon">En tendencia</a></li>
@@ -43,119 +41,256 @@
         </ul>
     </nav>
 
-    <!--Cuerpo principal-->
+    <!-- Contenido principal: catálogo, descuentos, tendencias y contacto. -->
     <main>
-        <!--Juegos disponibles y precios-->
-        <!--Nota: Los links de "Más información" no pretende llevar a la página oficial del juego, es solo una referencia-->
+        <!-- Catálogo general de juegos y precios. Los enlaces llevan a búsquedas de Steam, no necesariamente a páginas oficiales. -->
         <h1 id="productos">Lista de precios</h1>
         <p>A continuación se muestra la lista de precios de nuestros productos:</p>
         <section class="product-list">
             <div class="product-item">
                 <p>Arma 3: $10.00 </p>
                 <img src="./assets/img/Arma 3.jpg" alt="Arma 3" class="product-image">
-                <a href="https://arma3.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Arma+3" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Call To Arms - Gates Of Hell: Ostfront: $15.00 </p>
                 <img src="./assets/img/CTA_GOH.jpg" alt="Call To Arms - Gates Of Hell" class="product-image">
-                <a href="https://calltoarms.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Call+To+Arms+Gates+Of+Hell+Ostfront" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Ready Or Not: $20.00 </p>
                 <img src="./assets/img/Ready Or Not.jpg" alt="Ready Or Not" class="product-image">
-                <a href="https://readyornot.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Ready+Or+Not" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Dispatch: $25.00 </p>
                 <img src="./assets/img/Dispatch.jpg" alt="Dispatch" class="product-image">
-                <a href="https://dispatch.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Dispatch" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Mafia: $30.00 </p>
                 <img src="./assets/img/Mafia_DE.jpg" alt="Mafia" class="product-image">
-                <a href="https://mafia.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Mafia+Definitive+Edition" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Minecraft Dungeons II: $25.00 </p>
                 <img src="./assets/img/Minecraft_Dungeons_II.jfif" alt="Minecraft Dungeons II" class="product-image">
-                <a href="https://minecraft.net/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Minecraft+Dungeons+II" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Battlefield V: $40.00</p>
+                <img src="./assets/img/BF5.jfif" alt="Battlefield V" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Battlefield+V" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Dragon Ball Z: Kakarot: $60.00</p>
+                <img src="./assets/img/DBK.jfif" alt="Dragon Ball Z: Kakarot" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Dragon+Ball+Z+Kakarot" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Dragon Ball Xenoverse 2: $20.00</p>
+                <img src="./assets/img/DB_X2.jfif" alt="Dragon Ball Xenoverse 2" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Dragon+Ball+Xenoverse+2" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Door Kickers 2: $25.00</p>
+                <img src="./assets/img/Door_Kickers2.jfif" alt="Door Kickers 2" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Door+Kickers+2" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Euro Truck Simulator 2: $20.00</p>
+                <img src="./assets/img/ETS2.jfif" alt="Euro Truck Simulator 2" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Euro+Truck+Simulator+2" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Fallout 4: $20.00</p>
+                <img src="./assets/img/Fallout4.jfif" alt="Fallout 4" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Fallout+4" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Grand Theft Auto IV: $20.00</p>
+                <img src="./assets/img/GTA4.jpeg" alt="Grand Theft Auto IV" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Grand+Theft+Auto+IV" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Grand Theft Auto V: $30.00</p>
+                <img src="./assets/img/GTA5.jpeg" alt="Grand Theft Auto V" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Grand+Theft+Auto+V" target="_blank" class="product-link">Más información</a>
             </div>
         </section>
 
-        <!--Juegos en descuento-->
+        <!-- Juegos destacados en la sección de descuentos. -->
         <h1 id="descuentos">Descuentos</h1>
         <p>A continuación se muestra la lista de precios de nuestros productos con descuento:</p>
         <section class="product-list">
             <div class="product-item">
-                <p>Doom The Dark Ages: $40.00 </p>
+                <p class="product-name">Doom The Dark Ages</p>
+                <p class="discount-prices" data-original-price="40.00"><del>$40.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
                 <img src="./assets/img/DOOM_TDA.jpg" alt="Doom The Dark Ages" class="product-image">
-                <a href="https://doom.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Doom+The+Dark+Ages" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
-                <p>Borderlands 3: $30.00 </p>
+                <p class="product-name">Borderlands 3</p>
+                <p class="discount-prices" data-original-price="30.00"><del>$30.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
                 <img src="./assets/img/Borderlands_3.webp" alt="Borderlands 3" class="product-image">
-                <a href="https://borderlands.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Borderlands+3" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
-                <p>Arma Reforger: $40.00 </p>
+                <p class="product-name">Arma Reforger</p>
+                <p class="discount-prices" data-original-price="40.00"><del>$40.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
                 <img src="./assets/img/Arma_Reforger.jpg" alt="Arma Reforger" class="product-image">
-                <a href="https://armareforger.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Arma+Reforger" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
-                <p>Minecraft: $20.00 </p>
+                <p class="product-name">Minecraft</p>
+                <p class="discount-prices" data-original-price="20.00"><del>$20.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
                 <img src="./assets/img/Minecraft.jpeg" alt="Minecraft" class="product-image">
-                <a href="https://minecraft.net/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Minecraft" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
-                <p>Cyberpunk 2077: $40.00 </p>
+                <p class="product-name">Cyberpunk 2077</p>
+                <p class="discount-prices" data-original-price="40.00"><del>$40.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
                 <img src="./assets/img/Cyberpunk.jpg" alt="Cyberpunk 2077" class="product-image">
-                <a href="https://cyberpunk.net/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Cyberpunk+2077" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Tom Clancy's Ghost Recon Wildlands</p>
+                <p class="discount-prices" data-original-price="50.00"><del>$50.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/Ghost_Recon_Wildlands.jfif" alt="Tom Clancy's Ghost Recon Wildlands" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Ghost+Recon+Wildlands" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Hell Let Loose</p>
+                <p class="discount-prices" data-original-price="50.00"><del>$50.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/HellLetLoose.jfif" alt="Hell Let Loose" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Hell+Let+Loose" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Insurgency</p>
+                <p class="discount-prices" data-original-price="15.00"><del>$15.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/Insurgency_.jfif" alt="Insurgency" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Insurgency" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Metro 2033 Redux</p>
+                <p class="discount-prices" data-original-price="10.00"><del>$10.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/Metro_2033_Redux.jfif" alt="Metro 2033 Redux" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Metro+2033+Redux" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Metro: Last Light Redux</p>
+                <p class="discount-prices" data-original-price="10.00"><del>$10.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/Metro Last Light Redux.jfif" alt="Metro: Last Light Redux" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Metro+Last+Light+Redux" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Metro Exodus</p>
+                <p class="discount-prices" data-original-price="30.00"><del>$30.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/Metro_Exodus.jfif" alt="Metro Exodus" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Metro+Exodus" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Mortal Kombat 11</p>
+                <p class="discount-prices" data-original-price="50.00"><del>$50.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/Mortal Kombat 11 Poster.jfif" alt="Mortal Kombat 11" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Mortal+Kombat+11" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">PAYDAY 3</p>
+                <p class="discount-prices" data-original-price="30.00"><del>$30.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/PAYDAY3.jfif" alt="PAYDAY 3" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=PAYDAY+3" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p class="product-name">Rising Storm 2: Vietnam</p>
+                <p class="discount-prices" data-original-price="25.00"><del>$25.00</del> <strong class="sale-price" hidden></strong> <span class="discount-badge" hidden></span></p>
+                <img src="./assets/img/Rising_Storm2.jfif" alt="Rising Storm 2: Vietnam" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Rising+Storm+2+Vietnam" target="_blank" class="product-link">Más información</a>
             </div>
         </section>
 
-        <!--Juegos en tendencia-->
+        <!-- Juegos destacados por su tendencia. -->
         <h1 id="tendencia">En tendencia</h1>
         <p>A continuación se muestra la lista de precios de nuestros productos en tendencia:</p>
         <section class="product-list">
             <div class="product-item">
                 <p>Grand Theft Auto 6: $80.00 </p>
                 <img src="./assets/img/GTA_6.jpg" alt="GTA 6" class="product-image">
-                <a href="https://RockstarGames.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Grand+Theft+Auto+6" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>EA Sports FC 26: $50.00 </p>
                 <img src="./assets/img/FC_26.jpg" alt="EA Sports FC 26" class="product-image">
-                <a href="https://ea.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=EA+Sports+FC+26" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Call of Duty: Modern Warfare 4: $60.00 </p>
                 <img src="./assets/img/CoD_MW_4.jpg" alt="Call of Duty: Modern Warfare 4" class="product-image">
-                <a href="https://callofduty.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Call+of+Duty+Modern+Warfare+4" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Wardogs: $40.00 </p>
                 <img src="./assets/img/Wardogs.jpg" alt="Wardogs" class="product-image">
-                <a href="https://wardogs.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Wardogs" target="_blank" class="product-link">Más información</a>
             </div>
             <div class="product-item">
                 <p>Battlefield 6: $50.00 </p>
                 <img src="./assets/img/BF6.jpg" alt="Battlefield 6" class="product-image">
-                <a href="https://battlefield.com/" target="_blank" class="product-link">Más información</a>
+                <a href="https://store.steampowered.com/search/?term=Battlefield+6" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Borderlands 4: $70.00</p>
+                <img src="./assets/img/Borderlands_4.jpg" alt="Borderlands 4" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Borderlands+4" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Sniper Elite 4: $60.00</p>
+                <img src="./assets/img/SE4.jfif" alt="Sniper Elite 4" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Sniper+Elite+4" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Squad: $50.00</p>
+                <img src="./assets/img/Squad.jfif" alt="Squad" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Squad" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Stardew Valley: $15.00</p>
+                <img src="./assets/img/Stardew Valley.jfif" alt="Stardew Valley" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Stardew+Valley" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>The Escapists 2: $20.00</p>
+                <img src="./assets/img/The Escapists 2 Wallpaper.jfif" alt="The Escapists 2" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=The+Escapists+2" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Wolfenstein: The New Order: $20.00</p>
+                <img src="./assets/img/Wolfenstein_TNO.jfif" alt="Wolfenstein: The New Order" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Wolfenstein+The+New+Order" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Wolfenstein: The Old Blood: $20.00</p>
+                <img src="./assets/img/Wolfenstein_TOB.jfif" alt="Wolfenstein: The Old Blood" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Wolfenstein+The+Old+Blood" target="_blank" class="product-link">Más información</a>
+            </div>
+            <div class="product-item">
+                <p>Wolfenstein II: The New Colossus: $40.00</p>
+                <img src="./assets/img/Wolfenstein2.jfif" alt="Wolfenstein II: The New Colossus" class="product-image">
+                <a href="https://store.steampowered.com/search/?term=Wolfenstein+II+The+New+Colossus" target="_blank" class="product-link">Más información</a>
             </div>
         </section>
 
-        <!--Formulario de contacto-->
+        <!-- Formulario para que los visitantes envíen una consulta. -->
         <section>
-            <h3 id="contacto">Contacto</h3>
+            <h1 id="contacto">Contacto</h1>
             <p>Si tienes alguna pregunta o deseas más información sobre nuestros productos y servicios, no
             dudes en contactarnos:</p>
             <form name="formulario" method="POST" action="">
-
                 <label for="nombre">Nombre y Apellido</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" autocomplete="name" required>
 
                 <label for="correo">Correo electrónico</label>
-                <input type="email" name="correo" id="correo" placeholder="ingrese su correo electrónico" required>
+                <input type="email" name="correo" id="correo" placeholder="ingrese su correo electrónico" autocomplete="email" required>
 
                 <label for="msg">Mensaje</label>
                 <textarea name="msg" id="msg" placeholder="deje su mensaje aquí...." rows="7"></textarea>
@@ -163,10 +298,11 @@
                 <button type="submit" class="guardar">Enviar la consulta</button>
                 <button type="reset" class="cancelar">Borrar los datos</button>
             </form>
+            <p class="form-status" id="mensaje-formulario" role="status" aria-live="polite" hidden></p>
         </section>
     </main>
     
-    <!--Pie de página-->
+    <!-- Créditos y derechos del sitio. -->
     <footer>
         <p>&copy; 2026 Lionel Gramaglia. Todos los derechos reservados</p>
     </footer>

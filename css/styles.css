@@ -1,7 +1,6 @@
-/*Variables*/
+/* Colores, tipografías y valores compartidos por todo el sitio (tema oscuro por defecto). */
 :root {
     color-scheme: dark;
-    /*Variables de color*/
     --primary-color: #101820;
     --secondary-color: #1C2A38;
     --tertiary-color: #364B5E;
@@ -9,12 +8,13 @@
     --quinary-color: #A0E3D3;
     --text-color: #ECF1F5;
     --muted-text-color: #B6C2CE;
-    --radio20: 20px; /*Siempre suelo utilizar 20px en el border-radius*/
-    --primary-font: Caveat, sans-serif; /*Principalmente usado para cosas importantes y títulos*/
-    --secondary-font: Oswald, sans-serif; /*Principalmente usado para cosas secundarias y subtítulos*/
-    --tertiary-font: Bebas neue, sans-serif; /*Principalmente usado para llamar la atención*/
+    --radio20: 20px;
+    --primary-font: Caveat, sans-serif;
+    --secondary-font: Oswald, sans-serif;
+    --tertiary-font: Bebas neue, sans-serif;
 }
 
+/* Sobrescribe los colores cuando JavaScript activa el tema claro en el documento. */
 :root[data-theme="light"] {
     color-scheme: light;
     --primary-color: #F3F7F6;
@@ -26,7 +26,7 @@
     --muted-text-color: #526761;
 }
 
-/*Reset general*/
+/* Restablece el modelo de caja y los márgenes para mantener un diseño predecible. */
 * {
     box-sizing: border-box;
     padding: 0;     
@@ -38,9 +38,10 @@ body {
     font-family: var(--primary-font);
     color: var(--text-color);
     background-color: var(--primary-color);
+    cursor: default;
 }
 
-/*Banner del código de descuento*/
+/* Banner promocional ubicado antes del encabezado. */
 .promo-banner {
     padding: 12px 20px;
     border-bottom: 1px solid var(--tertiary-color);
@@ -53,9 +54,10 @@ body {
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
     margin: 0;
-    color: var(--quaternary-color)
+    color: var(--quaternary-color);
 }
 
+/* Presentación del sitio, separada del contenido por un borde. */
 header {
     position: relative;
     font-family: var(--secondary-font);
@@ -67,6 +69,7 @@ header {
     border-bottom: 1px solid var(--tertiary-color);
 }
 
+/* El botón se ubica en la esquina del encabezado y vuelve al flujo en pantallas pequeñas. */
 .theme-toggle {
     position: absolute;
     top: 16px;
@@ -74,7 +77,15 @@ header {
     font-family: var(--secondary-font);
 }
 
-/*Barra de navegación*/
+/* Barra de navegación y sus enlaces. */
+.inicio {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+}
+
 nav {
     padding: 10px 20px;
     background-color: var(--secondary-color);
@@ -87,17 +98,47 @@ nav ul {
     list-style: none;
 }
 
-nav li {
-    padding: 10px 0;
+/* Cada opción de navegación se presenta como un botón. */
+nav ul li {
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: var(--radio20);
 }
 
 nav a {
-    Font-family: var(--primary-font);
+    font-family: var(--primary-font);
+    color: var(--quaternary-color);
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
+    position: relative;
+    bottom: 8px;
 }
 
+/* Realce visual de los elementos y subrayado animado de los enlaces. */
+nav li:hover {
+    background-color: var(--tertiary-color);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--quaternary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Alineación de los iconos con el texto de cada enlace de navegación. */
 .Icon {
     width: 32px;
     height: 32px;
@@ -106,24 +147,7 @@ nav a {
     top: 8px;
 }
 
-a {
-    color: var(--quaternary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--quinary-color);
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-    outline: 2px solid var(--quinary-color);
-    outline-offset: 3px;
-}
-
-/*Sección principal*/
+/* Contenedor central del contenido principal. */
 main {
     width: min(100% - 40px, 1100px);
     margin: 0 auto;
@@ -131,21 +155,14 @@ main {
     font-family: var(--secondary-font);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
     margin-bottom: 16px;
     color: var(--text-color);
     font-family: var(--primary-font);
 }
 
-h1 {
-    font-size: clamp(2rem, 5vw, 2.75rem);
-}
-
+/* Estilo compartido por los párrafos de la página. */
 p {
     margin-bottom: 20px;
     color: var(--muted-text-color);
@@ -153,19 +170,19 @@ p {
     line-height: 1.6;
 }
 
-/*Sección princial: Productos*/
+/* Cuadrícula de tarjetas de productos y separación respecto a otras secciones. */
 .product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
     gap: 20px;
     margin: 32px 0 56px;
 }
 
+/* Tarjeta individual de producto, con título, imagen y enlace. */
 .product-item {
     padding: 20px;
     border: 1px solid var(--tertiary-color);
-    border-radius: 16px;
+    border-radius: var(--radio20);
     background-color: var(--secondary-color);
     text-align: center;
 }
@@ -176,6 +193,46 @@ p {
     font-family: var(--secondary-font);
 }
 
+.product-item .discount-prices {
+    display: flex;
+    min-height: 52px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 10px;
+}
+
+.product-item .product-name {
+    min-height: 0;
+    margin-bottom: 8px;
+}
+
+.discount-prices del {
+    color: var(--muted-text-color);
+    text-decoration-color: #e53935;
+    text-decoration-thickness: 2px;
+}
+
+.discount-prices .sale-price {
+    color: var(--quaternary-color);
+}
+
+.discount-prices .discount-badge {
+    padding: 2px 8px;
+    border-radius: var(--radio20);
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+/* Eleva suavemente la tarjeta al pasar el puntero sobre ella. */
+.product-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Imagen del producto, ajustada al ancho de su tarjeta. */
 img.product-image {
     display: block;
     width: 100%;
@@ -184,27 +241,43 @@ img.product-image {
     border-radius: var(--radio20);
 }
 
+.product-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Enlace de referencia de cada producto. */
 .product-link {
     display: inline-block;
     font-family: var(--secondary-font);
     font-weight: 700;
+    color: var(--quaternary-color);
+    text-decoration: none;
 }
 
+/* Subraya el enlace al pasar el puntero para indicar que es interactivo. */
+.product-link:hover {
+    text-decoration: underline;
+}
+
+/* Limita el ancho de las secciones que no son cuadrículas de productos (por ejemplo, contacto). */
 main > section:not(.product-list) {
     max-width: 680px;
 }
 
-/*Sección princial: Formulario de contacto*/
+/* Formulario de contacto organizado en una columna con separación entre campos. */
 form {
     display: grid;
     gap: 10px;
 }
 
+/* Etiquetas de los campos del formulario. */
 label {
     color: var(--text-color);
     font-weight: 700;
 }
 
+/* Campos de texto con colores compatibles con ambos temas. */
 input,
 textarea {
     width: 100%;
@@ -222,11 +295,23 @@ textarea::placeholder {
     color: var(--muted-text-color);
 }
 
+/* Mensaje accesible que aparece después de completar el formulario. */
+.form-status {
+    padding: 12px;
+    border-left: 4px solid var(--quaternary-color);
+    color: var(--text-color);
+}
+
+.form-status[hidden] {
+    display: none;
+}
+
+/* Estilo común de los botones del sitio y sus estados interactivos. */
 button {
     width: fit-content;
     padding: 11px 16px;
     border: 0;
-    border-radius: 8px;
+    border-radius: var(--radio20);
     background-color: var(--quaternary-color);
     color: var(--primary-color);
     font: inherit;
@@ -238,6 +323,7 @@ button:hover {
     background-color: var(--quinary-color);
 }
 
+/* Diferencia el botón que borra los campos del botón principal de envío. */
 button.cancelar {
     background-color: var(--tertiary-color);
     color: var(--text-color);
@@ -247,7 +333,7 @@ button.cancelar:hover {
     background-color: var(--secondary-color);
 }
 
-/*Pie de página*/
+/* Pie de página. */
 footer {
     padding: 20px;
     border-top: 1px solid var(--tertiary-color);
@@ -259,7 +345,7 @@ footer p {
     margin: 0;
 }
 
-/*Responsive para celular y tablet*/
+/* Ajustes para tabletas y celulares: encabezado, navegación y tarjetas en una columna. */
 @media (max-width: 760px) {
     header {
         display: flex;
@@ -273,8 +359,15 @@ footer p {
     }
 
     nav ul {
-        flex-direction: row;
         gap: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .Icon {
+        width: 24px;
+        height: 24px;
     }
 
     .product-list {
@@ -290,12 +383,26 @@ footer p {
     }
 }
 
+/* Ajuste adicional de espaciado para celulares pequeños. */
 @media (max-width: 480px) {
-    nav ul {
-        gap: 20px;
+    nav ul, .product-list {
+        gap: 12px;
     }
 
-    .promo-banner {
+    .product-item {
         padding: 12px;
+    }
+
+    .Icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .product-link, .product-item p {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 24px 0;
     }
 }
